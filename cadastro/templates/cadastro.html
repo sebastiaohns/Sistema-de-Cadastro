@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+	<div class="col-xs-8 col-md-8 mx-auto" style="margin: 10vh 0 10vh 0">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Cadastro</h5>
+				 {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+				<form action="{{ url_for('addrec') }}" method=post>
+
+					<div class="form-group">
+						<label for="exampleInputNome">Nome:</label>
+						<input type="nome" name="nome" class="form-control" id="exampleInputNome" placeholder="Nome">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputMatricula">Matricula:</label>
+						<input type="matricula" name="matricula" class="form-control" id="exampleInputMatricula" placeholder="Matricula">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputTelefone">Telefone:</label>
+						<input type="telefone" name="telefone" class="form-control" id="exampleInputTelefone" placeholder="Telefone">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email:</label>
+						<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputPassword1">Senha:</label>
+						<input type="password" name="senha" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

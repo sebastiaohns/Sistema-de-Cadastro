@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block content %}
+
+
+<div class="container">
+  <div class="card mx-auto" style="margin: 10vh 0 10vh 0">
+    <table class="table table-borderless table-hover">
+      <thead class="bg-secondary">
+        <tr>
+          <th scope="col">Nº</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Matrícula</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Senha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["id"]}}</td>
+          <td>{{row["nome"]}}</td>
+          <td>{{row["matricula"]}}</td>
+          <td>{{row["telefone"]}}</td>  
+          <td>{{row["email"]}}</td> 
+          <td>{{row["senha"]}}</td> 
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

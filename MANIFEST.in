@@ -1,0 +1,3 @@
+graft cadastro/templates
+graft cadastro/static
+include cadastro/schema.sql
